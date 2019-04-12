@@ -1,0 +1,106 @@
+.con_left{
+    position: absolute;
+    left: 11%;
+    top: 0;
+    border: 0.01rem solid #e3e4e5;
+    border-top: none;
+    background-color: #ffffff;
+}
+.con_left_head{
+    padding: 3rem;
+    border: 0.01rem solid #e3e4e5;
+    box-shadow: 1rem 0 1rem -1rem #e3e4e5, -1rem 0 1rem -1rem #e3e4e5;
+}
+.con_left_head img{
+    width: 10rem;
+    height: 10rem;
+}
+.con_left_nav_u{
+    list-style: none;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    color: #666666;
+    padding: 1rem 0rem;
+}
+.con_left_nav_u_l{
+    width: 15rem;
+    padding: 0rem 0rem 0rem 2rem;
+}
+.con_left_nav_u_l_d a:hover{
+    color:#f10215;
+}
+.con_left_nav_u_l:hover{
+    background-color: #e3e4e5;
+}
+.con_left_nav_u_l_d{
+    width: 100%;
+}
+.con_left_main{
+    position: absolute;
+    left: 17rem;
+    top: 16.2rem;
+    border: 0.01rem solid #e3e4e5;
+    width: 82.5rem;
+    height: 41.65rem;
+    font-size: 1rem;
+    display: none;
+	z-index: 2;
+    background: #ffffff;
+}
+.con_left_main_h{
+    margin: 1.5rem 1.5rem 0 1rem;
+}
+.con_left_main_h_ul{
+    list-style: none;
+    color: #e3e4e5;
+    line-height: 2rem;
+}
+.con_left_main_h_li{
+    float: left;
+    background-color: #000000;
+    height: 2rem;
+    width: 7rem;
+    margin-right: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+.con_left_main_c{
+    padding: 1rem;
+    clear: both;
+}
+.con_left_main_c_row{
+    margin: 1rem 0;
+}
+.con_left_nav_u_l_d:hover{
+    color:#f10215;
+}
+.con_left_main_c_row_l{
+    float:left;
+    margin-left: 1rem;
+    padding-right: 1rem;
+    width: 4rem;
+    font-weight: bold;
+}
+.con_left_main_c_row_l:hover{
+    color:#f10215;
+}
+.con_left_main_c_row_r{
+    float:left;
+    width: 74rem;
+}
+.con_left_main_c_row_r_ul{
+    list-style: none;
+    color: #666666;
+}
+.con_left_main_c_row_r_li{
+    border-left: 0.01rem solid #999999;
+    float:left;
+    margin: 0.5rem 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 1.2rem;
+    line-height: 1.2rem;
+}
+.con_left_nav_u_l:hover> .con_left_main{
+    display: block;
+}

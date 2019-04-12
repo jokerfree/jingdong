@@ -1,0 +1,10 @@
+1.float之后父层div高度失效，不自动填充，这时可以在子div最后加一个div设置为clear:both
+2.hover:伪类选择样式控制所有子节点样式a:hover >b{}
+3.hover:伪类选择样式控制自己子节点样式a:hover +b{}
+4.div自定义位置，position:relative,再设置top,left,right,bottom,这是相对于父级元素的位置
+5.z-index对position定位过的元素起作用
+6.position可以解决出现左右滚动条的问题
+7.搜索框，可以用一个div里面放置一个input和button解决单纯的input和button高度不一致问题，input边框去掉
+8.input去掉选中时的蓝边框，outline:none;
+9.子级节点使用position导致父节点高度失效，导致整体布局失败，血之教训，切记切记，京东所有布局均为从上到下层级，值得借鉴
+10.右边栏通过隐藏显示控制，一开始的时候因为父节点设置了背景色导致出现使用hover到某一个元素后所有con_flo_row全部整体显示，困扰了好几天，全部删除掉重新开始一种思路有时候非常有用。

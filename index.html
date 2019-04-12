@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<head>
+		<meta charset="UTF-8">
+		<title>京东仿</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				font-size: calc(100vw/128) !important;
+			}
+
+			.container {}
+		</style>
+		<link type="text/css" rel="stylesheet" href="css/swiper.min.css" />
+		<link type="text/css" rel="stylesheet" href="css/head.css">
+		<link type="text/css" rel="stylesheet" href="css/left.css">
+		<link type="text/css" rel="stylesheet" href="css/main.css">
+		<link type="text/css" rel="stylesheet" href="css/iconfont.css">
+		<link type="text/css" rel="stylesheet" href="css/float.css">
+	</head>
+	<body>
+		<div class="container" id="app">
+			<div class="con_head">
+				<div class="con_head_location">
+					<div class="localLocation"><span class="iconfont icon-weizhi"></span>天津</div>
+					<div class="allPart">
+						<div class="partItem">北京</div>
+						<div class="partItem">上海</div>
+						<div class="partItem" style="background: #f10215;color:#ffffff">天津</div>
+						<div class="partItem">重庆</div>
+						<div class="partItem">河北</div>
+						<div class="partItem">山西</div>
+						<div class="partItem">河南</div>
+						<div class="partItem">辽宁</div>
+						<div class="partItem">吉林</div>
+						<div class="partItem">黑龙江</div>
+						<div class="partItem">内蒙古</div>
+						<div class="partItem">江苏</div>
+						<div class="partItem">山东</div>
+						<div class="partItem">安徽</div>
+						<div class="partItem">浙江</div>
+						<div class="partItem">福建</div>
+						<div class="partItem">湖北</div>
+						<div class="partItem">湖南</div>
+						<div class="partItem">广东</div>
+						<div class="partItem">广西</div>
+						<div class="partItem">江西</div>
+						<div class="partItem">四川</div>
+						<div class="partItem">海南</div>
+						<div class="partItem">贵州</div>
+						<div class="partItem">云南</div>
+						<div class="partItem">西藏</div>
+						<div class="partItem">陕西</div>
+						<div class="partItem">甘肃</div>
+						<div class="partItem">青海</div>
+						<div class="partItem">宁夏</div>
+						<div class="partItem">新疆</div>
+						<div class="partItem">港澳</div>
+						<div class="partItem">台湾</div>
+						<div class="partItem">钓鱼岛</div>
+						<div class="partItem">海外</div>
+						<div style="clear: both"></div>
+					</div>
+				</div>
+				<div class="con_head_log_reg">
+					<div class="con_head_lr con_head_log">你好，请登录</div>
+					<div class="con_head_lr con_head_reg">免费注册</div>
+				</div>
+				<div class="con_head_nav">
+					<ul class="con_head_nav_u">
+						<li class="con_head_nav_l con_head_nav_ln"></li>
+						<li class="con_head_nav_l">
+							<div class="con_head_nav_l_d">我的订单</div>
+						</li>
+						<li class="con_head_nav_l con_head_nav_ln"></li>
+						<li class="con_head_nav_l con_head_nav_l_itm">
+							<div class="con_head_nav_l_d">我的京东</div>
+							<div class="con_head_nav_l_dd">
+								<div class="con_head_nav_l_dd_item_hr_t">
+									<div class="con_head_nav_l_dd_item">待处理订单</div>
+									<div class="con_head_nav_l_dd_item">消息</div>
+									<div class="con_head_nav_l_dd_item">返修退换货</div>
+									<div class="con_head_nav_l_dd_item">我的问答</div>
+									<div class="con_head_nav_l_dd_item">降价商品</div>
+									<div class="con_head_nav_l_dd_item">我的关注</div>
+									<div style="clear: both;"></div>
+								</div>
+								<div class="con_head_nav_l_dd_item_hr_b">
+									<div class="con_head_nav_l_dd_item">我的京豆</div>
+									<div class="con_head_nav_l_dd_item">我的优惠券</div>
+									<div class="con_head_nav_l_dd_item">我的白条</div>
+									<div class="con_head_nav_l_dd_item">我的理财</div>
+									<div style="clear: both;"></div>
+								</div>
+							</div>
+						</li>
+						<li class="con_head_nav_l con_head_nav_ln"></li>
+						<li class="con_head_nav_l">
+							<div class="con_head_nav_l_d">京东会员</div>
+						</li>
+						<li class="con_head_nav_l con_head_nav_ln"></li>
+						<li class="con_head_nav_l con_head_nav_l_itm">
+							<div class="con_head_nav_l_d">企业采购</div>
+							<div class="con_head_nav_l_dd">
+								<div class="con_head_nav_l_dd_item">企业购</div>
+								<div class="con_head_nav_l_dd_item">商用场景馆</div>
+								<div class="con_head_nav_l_dd_item">工业品</div>
+								<div class="con_head_nav_l_dd_item">礼品卡</div>
+								<div style="clear: both;"></div>
+							</div>
+						</li>
+						<li class="con_head_nav_l con_head_nav_ln"></li>
+						<li class="con_head_nav_l con_head_nav_l_itm">
+							<div class="con_head_nav_l_d">客户服务</div>
+							<div class="con_head_nav_l_dd">
+								<div class="con_head_nav_l_dd_h">
+									<div class="con_head_nav_l_dd_hh">客户</div>
+									<div class="con_head_nav_l_dd_item">帮助中心</div>
+									<div class="con_head_nav_l_dd_item">售后服务</div>
+									<div class="con_head_nav_l_dd_item">在线客服</div>
+									<div class="con_head_nav_l_dd_item">意见建议</div>
+									<div class="con_head_nav_l_dd_item">电话客服</div>
+									<div class="con_head_nav_l_dd_item">客服邮箱</div>
+									<div class="con_head_nav_l_dd_item">金融咨询</div>
+									<div class="con_head_nav_l_dd_item">全球售客服</div>
+									<div style="clear: both;"></div>
+								</div>
+								<div class="con_head_nav_l_dd_h">
+									<div class="con_head_nav_l_dd_hh">商户</div>
+									<div class="con_head_nav_l_dd_item">合作招商</div>
+									<div class="con_head_nav_l_dd_item">成长中心</div>
+									<div class="con_head_nav_l_dd_item">商家后台</div>
+									<div class="con_head_nav_l_dd_item">京麦工作台</div>
+									<div class="con_head_nav_l_dd_item">商家帮助</div>
+									<div class="con_head_nav_l_dd_item">规则平台</div>
+									<div style="clear: both;"></div>
+								</div>
+							</div>
+						</li>
+						<li class="con_head_nav_l con_head_nav_ln"></li>
+						<li class="con_head_nav_l con_head_nav_l_itm">
+							<div class="con_head_nav_l_d">网站导航</div>
+							<div class="con_head_nav_l_dd con_head_nav_l_ddl">
+								<div class="con_head_nav_l_dd_l">
+									<div class="con_head_nav_l_dd_lh">特色主题</div>
+									<div class="con_head_nav_l_dd_item">京东试用</div>
+									<div class="con_head_nav_l_dd_item">京东金融</div>
+									<div class="con_head_nav_l_dd_item">全球售</div>
+									<div class="con_head_nav_l_dd_item">国际站</div>
+									<div class="con_head_nav_l_dd_item">京东会员</div>
+									<div class="con_head_nav_l_dd_item">京东预售</div>
+									<div class="con_head_nav_l_dd_item">买什么</div>
+									<div class="con_head_nav_l_dd_item">俄语站</div>
+									<div class="con_head_nav_l_dd_item">装机大师</div>
+									<div class="con_head_nav_l_dd_item">0元评测</div>
+									<div class="con_head_nav_l_dd_item">港澳售</div>
+									<div class="con_head_nav_l_dd_item">优惠券</div>
+									<div class="con_head_nav_l_dd_item">秒杀</div>
+									<div class="con_head_nav_l_dd_item">闪购</div>
+									<div class="con_head_nav_l_dd_item">印尼站</div>
+									<div class="con_head_nav_l_dd_item">京东金融科技</div>
+									<div class="con_head_nav_l_dd_item">陪伴计划</div>
+									<div class="con_head_nav_l_dd_item">出海招商</div>
+									<div class="con_head_nav_l_dd_item">拍拍二手</div>
+									<div style="clear: both;"></div>
+								</div>
+								<div class="con_head_nav_l_dd_l">
+									<div class="con_head_nav_l_dd_lh">行业频道</div>
+									<div class="con_head_nav_l_dd_item">手机</div>
+									<div class="con_head_nav_l_dd_item">智能数码</div>
+									<div class="con_head_nav_l_dd_item">玩3C</div>
+									<div class="con_head_nav_l_dd_item">电脑办公</div>
+									<div class="con_head_nav_l_dd_item">家用电器</div>
+									<div class="con_head_nav_l_dd_item">京鱼座智能</div>
+									<div class="con_head_nav_l_dd_item">服装城</div>
+									<div class="con_head_nav_l_dd_item">京东生鲜</div>
+									<div class="con_head_nav_l_dd_item">家装城</div>
+									<div class="con_head_nav_l_dd_item">母婴食品</div>
+									<div class="con_head_nav_l_dd_item">农资频道</div>
+									<div class="con_head_nav_l_dd_item">整车</div>
+									<div class="con_head_nav_l_dd_item">图书</div>
+									<div class="con_head_nav_l_dd_item">劳动防护</div>
+									<div style="clear: both;"></div>
+								</div>
+								<div class="con_head_nav_l_dd_l">
+									<div class="con_head_nav_l_dd_lh">生活服务</div>
+									<div class="con_head_nav_l_dd_item">京东众筹</div>
+									<div class="con_head_nav_l_dd_item">白条</div>
+									<div class="con_head_nav_l_dd_item">京东金融App</div>
+									<div class="con_head_nav_l_dd_item">京东小金库</div>
+									<div class="con_head_nav_l_dd_item">理财</div>
+									<div class="con_head_nav_l_dd_item">话费</div>
+									<div class="con_head_nav_l_dd_item">水电煤</div>
+									<div class="con_head_nav_l_dd_item">彩票</div>
+									<div class="con_head_nav_l_dd_item">旅行</div>
+									<div class="con_head_nav_l_dd_item">机票酒店</div>
+									<div class="con_head_nav_l_dd_item">电影票</div>
+									<div class="con_head_nav_l_dd_item">京东到家</div>
+									<div class="con_head_nav_l_dd_item">游戏</div>
+									<div style="clear: both;"></div>
+								</div>
+								<div class="con_head_nav_l_dd_l">
+									<div class="con_head_nav_l_dd_lh">更多精选</div>
+									<div class="con_head_nav_l_dd_item">合作招商</div>
+									<div class="con_head_nav_l_dd_item">京东通信</div>
+									<div class="con_head_nav_l_dd_item">京东E卡</div>
+									<div class="con_head_nav_l_dd_item">企业采购</div>
+									<div class="con_head_nav_l_dd_item">服务市场</div>
+									<div class="con_head_nav_l_dd_item">办公生活馆</div>
+									<div class="con_head_nav_l_dd_item">乡村招募</div>
+									<div class="con_head_nav_l_dd_item">校园加盟</div>
+									<div class="con_head_nav_l_dd_item">京友邦</div>
+									<div class="con_head_nav_l_dd_item">京东社区</div>
+									<div class="con_head_nav_l_dd_item">游戏社区</div>
+									<div class="con_head_nav_l_dd_item">知识产权维权</div>
+									<div style="clear: both;"></div>
+								</div>
+								<div style="clear: both;"></div>
+							</div>
+						</li>
+						<li class="con_head_nav_l con_head_nav_ln"></li>
+						<li class="con_head_nav_l con_head_nav_l_itm">
+							<div class="con_head_nav_l_d con_head_nav_l_d_sj">手机京东</div>
+							<div class="con_head_nav_l_d_tra"></div>
+							<div class="con_head_nav_l_d_img"><img src="img/jdQRcode.png"></div>
+							<div class="con_head_nav_l_dd con_head_nav_l_ddi">
+								<div class="con_head_nav_l_dd_item_img">
+									<div class="con_head_nav_l_dd_item_img_1">
+										<img src="img/jdQRcode.png">
+									</div>
+									<div class="con_head_nav_l_dd_item_img_1">
+										<p>手机京东</p>
+										<p>新人大礼包</p>
+									</div>
+								</div>
+								<div class="con_head_nav_l_dd_item_img">
+									<div class="con_head_nav_l_dd_item_img_1">
+										<img src="img/jdweixin.jpg">
+									</div>
+									<div class="con_head_nav_l_dd_item_img_1">
+										<p>关注京东微信</p>
+										<p>微信扫一扫关注</p>
+										<p>新粉最高180元</p>
+										<p>惊喜礼包</p>
+									</div>
+								</div>
+								<div class="con_head_nav_l_dd_item_img">
+									<div class="con_head_nav_l_dd_item_img_1">
+										<img src="img/jdjinrong.jpg">
+									</div>
+									<div class="con_head_nav_l_dd_item_img_1">
+										<p>京东金融客户端</p>
+										<p>新人大礼包</p>
+									</div>
+								</div>
+								<div style="clear: both;"></div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="con_left">
+				<div class="con_left_head">
+					<img src="img/jdlogo.png">
+				</div>
+				<div class="con_left_nav">
+					<ul class="con_left_nav_u">
+						<li class="con_left_nav_u_l">
+							<div class="con_left_nav_u_l_d"><a>家用电器</a></div>
+							<div class="con_left_main">
+								<div class="con_left_main_h">
+									<ul class="con_left_main_h_ul">
+										<li class="con_left_main_h_li">家电馆</li>
+										<li class="con_left_main_h_li">乡镇专卖店</li>
+										<li class="con_left_main_h_li">家电服务</li>
+										<li class="con_left_main_h_li">企业采购</li>
+										<li class="con_left_main_h_li">商用电器</li>
+										<li style="clear: both;"></li>
+									</ul>
+								</div>
+								<div class="con_left_main_c">
+									<div class="con_left_main_c_row">
+										<div class="con_left_main_c_row_l">电视</div>
+										<div class="con_left_main_c_row_r">
+											<ul class="con_left_main_c_row_r_ul">
+												<li class="con_left_main_c_row_r_li">超薄电视</li>
+												<li class="con_left_main_c_row_r_li">OLED电视</li>
+												<li class="con_left_main_c_row_r_li">曲面电视</li>
+												<li class="con_left_main_c_row_r_li">4K超清电视</li>
+												<li class="con_left_main_c_row_r_li">55英寸</li>
+												<li class="con_left_main_c_row_r_li">65英寸</li>
+												<li class="con_left_main_c_row_r_li">电视配件</li>
+												<li style="clear: both;"></li>
+											</ul>
+										</div>
+										<div style="clear: both;"></div>
+									</div>
+									<div class="con_left_main_c_row">
+										<div class="con_left_main_c_row_l">空调</div>
+										<div class="con_left_main_c_row_r">
+											<ul class="con_left_main_c_row_r_ul">
+												<li class="con_left_main_c_row_r_li">壁挂式空调</li>
+												<li class="con_left_main_c_row_r_li">柜式空调</li>
+												<li class="con_left_main_c_row_r_li">中央空调</li>
+												<li class="con_left_main_c_row_r_li">一级能效空调</li>
+												<li class="con_left_main_c_row_r_li">变频空调</li>
+												<li class="con_left_main_c_row_r_li">1.5匹空调</li>
+												<li class="con_left_main_c_row_r_li">以旧换新</li>
+												<li style="clear: both;"></li>
+											</ul>
+										</div>
+										<div style="clear: both;"></div>
+									</div>
+									<div class="con_left_main_c_row">
+										<div class="con_left_main_c_row_l">洗衣机</div>
+										<div class="con_left_main_c_row_r">
+											<ul class="con_left_main_c_row_r_ul">
+												<li class="con_left_main_c_row_r_li">滚筒洗衣机</li>
+												<li class="con_left_main_c_row_r_li">洗烘一体机</li>
+												<li class="con_left_main_c_row_r_li">波轮洗衣机</li>
+												<li class="con_left_main_c_row_r_li">迷你洗衣机</li>
+												<li class="con_left_main_c_row_r_li">烘干机</li>
+												<li class="con_left_main_c_row_r_li">洗衣机配件</li>
+												<li style="clear: both;"></li>
+											</ul>
+										</div>
+										<div style="clear: both;"></div>
+									</div>
+									<div class="con_left_main_c_row">
+										<div class="con_left_main_c_row_l">冰箱</div>
+										<div class="con_left_main_c_row_r">
+											<ul class="con_left_main_c_row_r_ul">
+												<li class="con_left_main_c_row_r_li">多门</li>
+												<li class="con_left_main_c_row_r_li">对开门</li>
+												<li class="con_left_main_c_row_r_li">三门</li>
+												<li class="con_left_main_c_row_r_li">双门</li>
+												<li class="con_left_main_c_row_r_li">冷柜/冰吧</li>
+												<li class="con_left_main_c_row_r_li">酒柜</li>
+												<li class="con_left_main_c_row_r_li">冰箱配件</li>
+												<li style="clear: both;"></li>
+											</ul>
+										</div>
+										<div style="clear: both;"></div>
+									</div>
+									<div class="con_left_main_c_row">
+										<div class="con_left_main_c_row_l">厨卫大电</div>
+										<div class="con_left_main_c_row_r">
+											<ul class="con_left_main_c_row_r_ul">
+												<li class="con_left_main_c_row_r_li">油烟机</li>
+												<li class="con_left_main_c_row_r_li">燃气灶</li>
+												<li class="con_left_main_c_row_r_li">烟灶套装</li>
+												<li class="con_left_main_c_row_r_li">集成灶</li>
+												<li class="con_left_main_c_row_r_li">消毒柜</li>
+												<li class="con_left_main_c_row_r_li">洗碗机</li>
+												<li class="con_left_main_c_row_r_li">电热水器</li>
+												<li class="con_left_main_c_row_r_li">燃气热水器</li>
+												<li class="con_left_main_c_row_r_li">嵌入式厨电</li>
+												<li style="clear: both;"></li>
+											</ul>
+										</div>
+										<div style="clear: both;"></div>
+									</div>
+									<div class="con_left_main_c_row">
+										<div class="con_left_main_c_row_l">厨房小电</div>
+										<div class="con_left_main_c_row_r">
+											<ul class="con_left_main_c_row_r_ul">
+												<li class="con_left_main_c_row_r_li">破壁机</li>
+												<li class="con_left_main_c_row_r_li">电烤箱</li>
+												<li class="con_left_main_c_row_r_li">电饭煲</li>
+												<li class="con_left_main_c_row_r_li">电压力锅</li>
+												<li class="con_left_main_c_row_r_li">电炖锅</li>
+												<li class="con_left_main_c_row_r_li">豆浆机</li>
+												<li class="con_left_main_c_row_r_li">料理机</li>
+												<li class="con_left_main_c_row_r_li">咖啡机</li>
+												<li class="con_left_main_c_row_r_li">电饼铛</li>
+												<li class="con_left_main_c_row_r_li">榨汁机/原汁机</li>
+												<li class="con_left_main_c_row_r_li">电水壶/热水瓶</li>
+												<li class="con_left_main_c_row_r_li">微波炉</li>
+												<li class="con_left_main_c_row_r_li">电火锅</li>
+												<li class="con_left_main_c_row_r_li">养生壶</li>
+												<li class="con_left_main_c_row_r_li">电磁炉</li>
+												<li class="con_left_main_c_row_r_li">面包机</li>
+												<li class="con_left_main_c_row_r_li">空气炸锅</li>
+												<li class="con_left_main_c_row_r_li">面条机</li>
+												<li class="con_left_main_c_row_r_li">电陶炉</li>
+												<li class="con_left_main_c_row_r_li">煮蛋器</li>
+												<li class="con_left_main_c_row_r_li">电烧烤炉</li>
+												<li style="clear: both;"></li>
+											</ul>
+										</div>
+										<div style="clear: both;"></div>
+									</div>
+									<div class="con_left_main_c_row">
+										<div class="con_left_main_c_row_l">生活电器</div>
+										<div class="con_left_main_c_row_r">
+											<ul class="con_left_main_c_row_r_ul">
+												<li class="con_left_main_c_row_r_li">空气净化器</li>
+												<li class="con_left_main_c_row_r_li">除湿机</li>
+												<li class="con_left_main_c_row_r_li">干衣机</li>
+												<li class="con_left_main_c_row_r_li">电风扇</li>
+												<li class="con_left_main_c_row_r_li">冷风扇</li>
+												<li class="con_left_main_c_row_r_li">吸尘器</li>
+												<li class="con_left_main_c_row_r_li">除螨仪</li>
+												<li class="con_left_main_c_row_r_li">扫地机器人</li>
+												<li class="con_left_main_c_row_r_li">蒸汽拖把/拖地机</li>
+												<li class="con_left_main_c_row_r_li">电话机</li>
+												<li class="con_left_main_c_row_r_li">饮水机</li>
+												<li class="con_left_main_c_row_r_li">净水器</li>
+												<li class="con_left_main_c_row_r_li">取暖电器</li>
+												<li class="con_left_main_c_row_r_li">挂烫机/熨斗</li>
+												<li class="con_left_main_c_row_r_li">加湿器</li>
+												<li class="con_left_main_c_row_r_li">毛球修剪器</li>
+												<li class="con_left_main_c_row_r_li">生活电器配件</li>
+												<li style="clear: both;"></li>
+											</ul>
+										</div>
+										<div style="clear: both;"></div>
+									</div>
+									<div class="con_left_main_c_row">
+										<div class="con_left_main_c_row_l">个护健康</div>
+										<div class="con_left_main_c_row_r">
+											<ul class="con_left_main_c_row_r_ul">
+												<li class="con_left_main_c_row_r_li">剃须刀</li>
+												<li class="con_left_main_c_row_r_li">电动牙刷</li>
+												<li class="con_left_main_c_row_r_li">电吹风</li>
+												<li class="con_left_main_c_row_r_li">美容器洁面仪</li>
+												<li class="con_left_main_c_row_r_li">按摩器</li>
+												<li class="con_left_main_c_row_r_li">健康秤</li>
+												<li class="con_left_main_c_row_r_li">卷/直发器</li>
+												<li class="con_left_main_c_row_r_li">剃/脱毛器</li>
+												<li class="con_left_main_c_row_r_li">理发器</li>
+												<li class="con_left_main_c_row_r_li">足浴盆</li>
+												<li class="con_left_main_c_row_r_li">足疗机</li>
+												<li class="con_left_main_c_row_r_li">按摩椅</li>
+												<li style="clear: both;"></li>
+											</ul>
+										</div>
+										<div style="clear: both;"></div>
+									</div>
+									<div class="con_left_main_c_row">
+										<div class="con_left_main_c_row_l">视听影音</div>
+										<div class="con_left_main_c_row_r">
+											<ul class="con_left_main_c_row_r_ul">
+												<li class="con_left_main_c_row_r_li">家庭影院</li>
+												<li class="con_left_main_c_row_r_li">KTV音响</li>
+												<li class="con_left_main_c_row_r_li">迷你音响</li>
+												<li class="con_left_main_c_row_r_li">DVD功放</li>
+												<li class="con_left_main_c_row_r_li">回音壁</li>
+												<li class="con_left_main_c_row_r_li">麦克风</li>
+												<li style="clear: both;"></li>
+											</ul>
+										</div>
+										<div style="clear: both;"></div>
+									</div>
+									<div style="clear: both;"></div>
+								</div>
+							</div>
+						</li>
+						<li class="con_left_nav_u_l">
+							<div class="con_left_nav_u_l_d"><a>手机</a>/<a>运营商</a>/<a>数码</a></div>
+						</li>
+						<li class="con_left_nav_u_l">
+							<div class="con_left_nav_u_l_d"><a>电脑</a>/<a>办公</a></div>
+						</li>
+						<li class="con_left_nav_u_l">
+							<div class="con_left_nav_u_l_d"><a>家居</a>/<a>家具</a>/<a>家装</a>/<a>厨具</a></div>
+						</li>
+						<li class="con_left_nav_u_l">
+							<div class="con_left_nav_u_l_d"><a>男装</a>/<a>女装</a>/<a>童装</a>/<a>内衣</a></div>
+						</li>
+						<li class="con_left_nav_u_l">
+							<div class="con_left_nav_u_l_d"><a>美妆</a>/<a>个护清洁</a>/<a>宠物</a></div>
+						</li>
+						<li class="con_left_nav_u_l">
+							<div class="con_left_nav_u_l_d"><a>女鞋</a>/<a>箱包</a>/<a>钟表</a><a>珠宝</a></div>
+						</li>
+						<li class="con_left_nav_u_l">
+							<div class="con_left_nav_u_l_d"><a>男鞋</a>/<a>运动</a>/<a>户外</a></div>
+						</li>
+						<li class="con_left_nav_u_l">
+							<div class="con_left_nav_u_l_d"><a>房产</a>/<a>汽车</a>/<a>汽车用品</a></div>
+						</li>
+						<li class="con_left_nav_u_l">
+							<div class="con_left_nav_u_l_d"><a>母婴</a>/<a>玩具乐器</a></div>
+						</li>
+						<li class="con_left_nav_u_l">
+							<div class="con_left_nav_u_l_d"><a>食品</a>/<a>酒类</a>/<a>生鲜</a>/<a>特产</a></div>
+						</li>
+						<li class="con_left_nav_u_l">
+							<div class="con_left_nav_u_l_d"><a>艺术</a>/<a>礼品鲜花</a>/<a>农资绿植</a></div>
+						</li>
+						<li class="con_left_nav_u_l">
+							<div class="con_left_nav_u_l_d"><a>医药保健</a>/<a>计生情趣</a></div>
+						</li>
+						<li class="con_left_nav_u_l">
+							<div class="con_left_nav_u_l_d"><a>图书</a>/<a>文娱</a>/<a>电子书</a></div>
+						</li>
+						<li class="con_left_nav_u_l">
+							<div class="con_left_nav_u_l_d"><a>机票</a>/<a>酒店</a>/<a>旅游</a>/<a>生活</a></div>
+						</li>
+						<li class="con_left_nav_u_l">
+							<div class="con_left_nav_u_l_d"><a>理财</a>/<a>众筹</a>/<a>白条</a>/<a>保险</a></div>
+						</li>
+						<li class="con_left_nav_u_l">
+							<div class="con_left_nav_u_l_d"><a>安装</a>/<a>维修</a>/<a>清洗保养</a></div>
+						</li>
+						<li class="con_left_nav_u_l">
+							<div class="con_left_nav_u_l_d"><a>工业品</a></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="con_main">
+				<div class="con_main_h">
+					<div class="con_main_h_di">
+						<input type="text" class="con_main_h_inp" placeholder="无限手套">
+						<div class="con_main_h_db">
+							<span class="iconfont icon-sousuo"></span>
+						</div>
+						<div class="con_main_h_dg">
+							<span class="iconfont icon-tubiaozhizuomoban"></span>
+						</div>
+					</div>
+				</div>
+				<div class="con_main_content">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<!-- (div.swiper-slide>img[src='img/$.png'])*6 -->
+							<div class="swiper-slide"><img src="img/1.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="img/2.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="img/3.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="img/4.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="img/5.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="img/6.jpg" alt=""></div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+			<div class="con_flo">
+				
+			</div>
+			<div class="con_flo_m">
+				<div class="con_flo_row">
+					<div class="con_flo_item_l">京东会员</div>
+					<div class="con_flo_item_r"><span class="icon iconfont icon-iconfront-"></span></div>
+				</div>
+				<div class="con_flo_row">
+					<div class="con_flo_item_l">购物车</div>
+					<div class="con_flo_item_r"><span class="icon iconfont icon-gouwuche"></span></div>
+				</div>
+				<div class="con_flo_row">
+					<div class="con_flo_item_l">我的关注</div>
+					<div class="con_flo_item_r"><span class="icon iconfont icon-icon--"></span></div>
+				</div>
+				<div class="con_flo_row">
+					<div class="con_flo_item_l">我的足迹</div>
+					<div class="con_flo_item_r"><span class="icon iconfont icon-zuji"></span></div>
+				</div>
+				<div class="con_flo_row">
+					<div class="con_flo_item_l">我的消息</div>
+					<div class="con_flo_item_r"><span class="icon iconfont icon-xiaoxi"></span></div>
+				</div>
+				<div class="con_flo_row">
+					<div class="con_flo_item_l">咨询JIMI</div>
+					<div class="con_flo_item_r"><span class="icon iconfont icon-zixun"></span></div>
+				</div>
+				<div class="con_flo_row">
+					<div class="con_flo_item_l">反馈</div>
+					<div class="con_flo_item_r"><span class="icon iconfont icon-iconfront-1"></span></div>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
+		</div>
+		</div>
+		<script>
+			var mySwiper = new Swiper('.swiper-container', {
+				autoplay: true, //可选选项，自动滑动
+				loop: true, // 循环模式选项
+				// 如果需要分页器
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+			})
+		</script>
+	</body>
+</html>

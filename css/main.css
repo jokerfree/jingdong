@@ -1,0 +1,60 @@
+.con_main{
+    position: absolute;
+    left: 25%;
+}
+.con_main_h{
+    margin-top:7rem;
+	margin-left: 15rem;
+}
+.con_main_h_di{
+    width: 45rem;
+    height: 3rem;
+    border: 0.01rem solid #e3e4e5;
+}
+.con_main_h_inp{
+    outline:none;
+    width: 36rem;
+    height: 2rem;
+    margin: 0.5rem 0rem 0.5rem 0.5rem;
+    border: none;
+}
+.con_main_h_db{
+    background-color: #f10215;
+    width: 4rem;
+    height: 3rem;
+    border: none;
+    float: right;
+}
+.con_main_h_dg{
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    float: right;
+}
+.icon-tubiaozhizuomoban:hover{
+    color: #f10215;
+}
+.icon-tubiaozhizuomoban{
+    display: inline-block;
+    height: 3rem;
+    line-height: 3rem;
+}
+.icon-sousuo{
+    display: inline-block;
+    height: 3rem;
+    line-height: 3rem;
+    color: #ffffff;
+    margin-left: 0.8rem;
+}
+.con_main_content{
+	margin-top: 3.8rem;
+	width: 75rem;
+}
+.swiper-slide img{
+	width: 100%;
+    height: 41.5rem;
+}
+.swiper-pagination-bullet{
+	border-radius: 0;
+	background: #ffffff;
+}
